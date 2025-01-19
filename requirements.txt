@@ -1,0 +1,11 @@
+# **Django Rest Framework** is used for REST API
+# See https://www.django-rest-framework.org/
+djangorestframework==3.15.2
+
+# **psycopg2-binary**
+# See https://www.psyc
+psycopg2-binary==2.9.3
+
+# ** simplejwt used to token authentica
+# see https://github.com/jazzband/djang
+djangorestframework-simplejwt==5.4.0
