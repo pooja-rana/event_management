@@ -7,7 +7,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.authentication import JWTAuthentication
 
 from .messages import CommonMessages
-from .models import Event, Ticket
+from .models import Event
 from .purchase_ticket_service import PurchaseTicketService
 from .serializers import UserSerializer, EventDetailsSerializer
 
