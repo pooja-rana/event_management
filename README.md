@@ -24,5 +24,5 @@ A simplified Event Management API built with Django and Django REST Framework. T
 - Python 3.8+
 - Django 4.0+
 - Django REST Framework
-- PostgreSQL or MySQL (or SQLite for development/testing)
+- PostgreSQL or MySQL
 - `djangorestframework-simplejwt`
