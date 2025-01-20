@@ -9,3 +9,11 @@ psycopg2-binary==2.9.3
 # ** simplejwt used to token authentica
 # see https://github.com/jazzband/djang
 djangorestframework-simplejwt==5.4.0
+
+# **environs** is used for read the environs variable.
+# See https://pypi.org/project/environs/
+environs==11.0.0
+
+# **Django** is use for webserver
+# See https://www.djangoproject.com/start/
+Django==4.2.14
