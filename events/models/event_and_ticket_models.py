@@ -4,7 +4,7 @@ from django.db import models
 class Event(models.Model):
     """ This is event model that contain details model"""
     name = models.CharField(max_length=128, null=True, blank=True)
-    date = models.DateField()
+    date = models.DateTimeField()
     total_tickets = models.IntegerField(null=True, blank=True)
     tickets_sold = models.IntegerField(default=0)
 
