@@ -2,7 +2,7 @@ from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
 from events.constant import UserConst
-from events.messages import UsersMessages
+from events.messages import CommonMessages
 from events.models import User
 
 
@@ -14,13 +14,13 @@ class UserSerializer(serializers.ModelSerializer):
         required=True,
         validators=[
             UniqueValidator(queryset=User.objects.all(),
-                            message=UsersMessages.ENTITY_ALREADY_EXISTS),
+                            message=CommonMessages.ENTITY_ALREADY_EXISTS),
         ],
         error_messages={
-            "invalid": UsersMessages.INVALID_USERNAME,
-            "required": UsersMessages.ENTITY_REQUIRED_FIELD,
-            "max_length": UsersMessages.ENTITY_WITH_MAX_LENGTH_EXCEED.format(max_length=150),
-            "blank": UsersMessages.ENTITY_REQUIRED_FIELD,
+            "invalid": CommonMessages.INVALID_USERNAME,
+            "required": CommonMessages.ENTITY_REQUIRED_FIELD,
+            "max_length": CommonMessages.ENTITY_WITH_MAX_LENGTH_EXCEED.format(max_length=150),
+            "blank": CommonMessages.ENTITY_REQUIRED_FIELD,
         }
     )
     password = serializers.RegexField(
@@ -29,16 +29,16 @@ class UserSerializer(serializers.ModelSerializer):
         max_length=128,
         regex=UserConst.PASSWORD_REGEX.value,
         error_messages={
-            "invalid": UsersMessages.INVALID_PASSWORD,
-            "required": UsersMessages.ENTITY_REQUIRED_FIELD,
-            "blank": UsersMessages.ENTITY_REQUIRED_FIELD,
-            "max_length": UsersMessages.ENTITY_WITH_MAX_LENGTH_EXCEED.format(max_length=128),
+            "invalid": CommonMessages.INVALID_PASSWORD,
+            "required": CommonMessages.ENTITY_REQUIRED_FIELD,
+            "blank": CommonMessages.ENTITY_REQUIRED_FIELD,
+            "max_length": CommonMessages.ENTITY_WITH_MAX_LENGTH_EXCEED.format(max_length=128),
         })
     role = serializers.ChoiceField(
         required=True,
         choices=User.ROLE_CHOICES,
         error_messages={
-            "required": UsersMessages.ENTITY_REQUIRED_FIELD,
+            "required": CommonMessages.ENTITY_REQUIRED_FIELD,
         }
     )
 
