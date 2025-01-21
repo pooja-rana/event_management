@@ -32,7 +32,7 @@ A simplified Event Management API built with Django and Django REST Framework. T
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/pooja-rana/event_management/EventAPI.git
+   git clone --branch develop https://github.com/pooja-rana/event_management.git
 
    ```
  2 Create a virtual environment and activate it:
